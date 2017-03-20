@@ -1,21 +1,19 @@
 // (실사용 클래스)
 
 
-import java.util.Scanner;
-
 public class Account
 {
 	//[변수]
-	private double balance;
+	protected double balance;
 	
 	public Account() {					//(초기화: 0)
 	}
 	public Account(double input) {		//(초기화)
-		this.balance = input; 
+		balance = input; 
 	}
 	
 	public void credit(double input) {				//(입금)
-		this.balance += input;
+		balance += input;
 	}
 	
 	public void debit(double minus) {				//(인출)
@@ -29,8 +27,8 @@ public class Account
 	}
 	
 	public void getBalance() {							//(출력)
-		System.out.println(this.balance);
-		System.out.printf("%.2f" ,this.balance);
+		System.out.println(balance);
+		System.out.printf("%.2f" ,balance);
 	}
 	
 	
