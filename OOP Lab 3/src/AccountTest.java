@@ -25,11 +25,11 @@ public class AccountTest {
 		account2.balance();
 		
 		
-//		account1.debit(25.67);
+//		account1.debit();
 		System.out.print("Enter withdrawl amount for account1: ");
 		Scanner sc = new Scanner(System.in);
 		input = sc.nextDouble();
-		account1.debit(input);
+		account1.debit(input);				//(25.67)
 		
 		System.out.print("account1 balance: ");
 		account1.balance();
@@ -37,11 +37,10 @@ public class AccountTest {
 		account2.balance();
 		
 		
-//		account2.debit(10.00);
 		System.out.print("Enter withdrawl amount for account2: ");
 //		sc = new Scanner(System.in);		//(이미 sc 객체를 만들었으니 선언 생략)
 		input = sc.nextDouble();
-		account2.debit(input);
+		account2.debit(input);				//(10.00)
 		
 		System.out.print("account1 balance: ");
 		account1.balance();
