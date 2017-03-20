@@ -10,12 +10,12 @@ public class Account
 	
 	public Account() {					//(초기화: 0)
 	}
-	public Account(double money) {		//(초기화)
-		this.money = money; 
+	public Account(double input) {		//(초기화)
+		this.money = input; 
 	}
 	
-	public void credit(double money) {				//(입금)
-		this.money += money;
+	public void credit(double input) {				//(입금)
+		this.money += input;
 	}
 	
 	public void debit(double minus) {				//(인출)
