@@ -28,7 +28,7 @@ public class Account
 		}
 	}
 	
-	public void balance() {							//(출력)
+	public void getBalance() {							//(출력)
 		System.out.println(this.balance);
 		System.out.printf("%.2f" ,this.balance);
 	}

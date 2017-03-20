@@ -14,9 +14,9 @@ public class AccountTest {
 		Account account2 = new Account();
 		
 		System.out.print("account1 balance: ");
-		account1.balance();
+		account1.getBalance();
 		System.out.print("account2 balance: ");
-		account2.balance();
+		account2.getBalance();
 		
 		
 		System.out.print("Enter withdrawl amount for account1: ");
@@ -25,9 +25,9 @@ public class AccountTest {
 		account1.debit(input);				//(25.67)
 		
 		System.out.print("account1 balance: ");
-		account1.balance();
+		account1.getBalance();
 		System.out.print("account2 balance: ");
-		account2.balance();
+		account2.getBalance();
 		
 		
 		System.out.print("Enter withdrawl amount for account2: ");
@@ -36,9 +36,9 @@ public class AccountTest {
 		account2.debit(input);				//(10.00)
 		
 		System.out.print("account1 balance: ");
-		account1.balance();
+		account1.getBalance();
 		System.out.print("account2 balance: ");
-		account2.balance();
+		account2.getBalance();
 		
 	}
 
