@@ -12,12 +12,6 @@ public class AccountTest {
 		//(2개 account 초기화)
 		Account account1 = new Account(50.00);
 		Account account2 = new Account();
-		/*
-		Account account1 = new Account();
-		Account account2 = new Account();
-		account1.credit(50.00);
-		// account2.credit(0.00);
-		*/
 		
 		System.out.print("account1 balance: ");
 		account1.balance();
