@@ -6,8 +6,6 @@ public class Account
 	//[변수]
 	protected double balance;
 	
-	public Account() {					//(초기화: 0)
-	}
 	public Account(double input) {		//(초기화)
 		balance = input; 
 	}
@@ -28,14 +26,13 @@ public class Account
 	
 	public void getBalance() {							//(출력)
 		System.out.println(balance);
-		System.out.printf("%.2f" ,balance);
+		//System.out.printf("%.2f" ,balance);
 	}
 	/*
 	public void setBalance() {
 		
 	}
 	*/
-	
 	
 	
 }

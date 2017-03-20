@@ -17,7 +17,7 @@ public class checkingAccount extends Account {
 	@Override
 	public void debit (double input)
 	{
-		if ( balance -  input < credit_limit ) {		//(한도보다 많이 출금하려하면)
+		if ( balance - input < credit_limit ) {		//(한도보다 많이 출금하려하면)
 			System.out.println("Cannot withdraw: credit limit exceeded!");
 		}
 		else {
@@ -25,7 +25,6 @@ public class checkingAccount extends Account {
 			if (balance < input)						//(잔금이 마이너스면 출력 - 문제 조건)
 			{
 				System.out.println("You now have - balance");
-				balance -= input;
 			}
 		}
 		
