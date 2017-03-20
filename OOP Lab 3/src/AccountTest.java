@@ -25,7 +25,6 @@ public class AccountTest {
 		account2.balance();
 		
 		
-//		account1.debit();
 		System.out.print("Enter withdrawl amount for account1: ");
 		Scanner sc = new Scanner(System.in);
 		input = sc.nextDouble();
