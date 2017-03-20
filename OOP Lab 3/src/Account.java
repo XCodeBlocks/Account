@@ -30,6 +30,11 @@ public class Account
 		System.out.println(balance);
 		System.out.printf("%.2f" ,balance);
 	}
+	/*
+	public void setBalance() {
+		
+	}
+	*/
 	
 	
 	
