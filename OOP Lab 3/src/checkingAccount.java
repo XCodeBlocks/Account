@@ -5,8 +5,8 @@ public class checkingAccount extends Account {
 		// TODO Auto-generated constructor stub
 	}
 
-	public checkingAccount(double money) {
-		super(money);
+	public checkingAccount(double input) {
+		super(input);
 		// TODO Auto-generated constructor stub
 	}
 
