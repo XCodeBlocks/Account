@@ -1,11 +1,11 @@
 
 public class checkingAccount extends Account {
 
-	public checkingAccount() {
+	checkingAccount() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public checkingAccount(double input) {
+	checkingAccount(double input) {
 		super(input);
 		// TODO Auto-generated constructor stub
 	}
