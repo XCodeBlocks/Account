@@ -1,7 +1,7 @@
 // (실사용 클래스)
 
 
-public class Account
+public abstract class Account
 {
 	//[변수]
 	protected double balance;
