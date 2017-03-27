@@ -10,8 +10,8 @@ public class AccountTest {
 		double input;
 //[1문단]		
 		//(2개 account 초기화)
-		checkingAccount account1 = new checkingAccount(100.00);
-		checkingAccount account2 = new checkingAccount(100.00);
+		CheckingAccount account1 = new CheckingAccount(100.00);
+		CheckingAccount account2 = new CheckingAccount(100.00);
 		
 		System.out.print("account1 balance: ");
 		account1.getBalance();
