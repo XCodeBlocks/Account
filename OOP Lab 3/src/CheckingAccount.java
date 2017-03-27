@@ -1,5 +1,5 @@
 
-public class checkingAccount extends Account {
+public class CheckingAccount extends Account {
 	
 	//[변수선언]
 	private int		credit_limit	;
@@ -7,7 +7,7 @@ public class checkingAccount extends Account {
 	private double	loan_interest	;
 	
 	//[생성자]
-	checkingAccount(double input) {
+	CheckingAccount(double input) {
 		super(input);
 		credit_limit	= -50	;
 		interest		= 0.01	;
