@@ -7,23 +7,35 @@ public class AccountTest {
 	
 	public static void main(String[] args) {
 		
+//[1문단]
+// CheckingAccount
+		Scanner scan = new Scanner(System.in);
 		double amount;
-//[1문단]		
+
 		//(2개 account 초기화)
 		CheckingAccount account1 = new CheckingAccount(100.00);
 		CheckingAccount account2 = new CheckingAccount(100.00);
 		
-		System.out.print("account1 balance: ");
-		account1.getBalance();
-		System.out.print("account2 balance: ");
-		account2.getBalance();
-		
-		System.out.print("Enter deposit amount for ccount1: ");
-		Scanner scan = new Scanner(System.in);
-		amount = scan.nextDouble();
-		account1.credit(amount);				//(900)
+		System.out.printf("Account1 balance: $ %.2f \t현재출금가능액: %.2f\n"
+						account1.getBalance(), account1.getWithdrawableAccount() );
+		// 파산 여부 확인 ( isBankrupt - 형변환 )
 
+	// (1달 후)
+		account1.passTime(1);
+		System.out.printf("Account1 balance: $ %.2f \t현재출금가능액: %.2f\n"
+						account1.getBalance(), account1.getWithdrawableAccount() );
+		// 파산 여부 확인 ( isBankrupt - 형변환 )
+
+
+	// (5달 후)	-- (총 6달 후)
+		account1.passTime(5);
+		System.out.printf("Account1 balance: $ %.2f \t현재출금가능액: %.2f\n"
+						account1.getBalance(), account1.getWithdrawableAccount() );
+		// 파산 여부 확인 ( isBankrupt - 형변환 )
+		
+		
 //[2문단]
+// SavingAccount
 		System.out.print("account1 balance: ");
 		account1.getBalance();
 		System.out.print("account2 balance: ");
