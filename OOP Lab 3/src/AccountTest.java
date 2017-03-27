@@ -48,7 +48,7 @@ public class AccountTest {
 		account1.passTime(6);
 		System.out.printf("Account2 balance: $ %.2f \t현재출금가능액: %.2f\n"
 						account2.getBalance(), account2.getWithdrawableAccount() );
-		
+		account2.debit(50);
 		
 		
 		
