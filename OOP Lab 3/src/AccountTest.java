@@ -45,10 +45,17 @@ public class AccountTest {
 
 	// (6달 후)
 		System.out.println("6 months later!");
-		account1.passTime(6);
+		account2.passTime(6);
 		System.out.printf("Account2 balance: $ %.2f \t현재출금가능액: %.2f\n"
 						account2.getBalance(), account2.getWithdrawableAccount() );
 		account2.debit(50);
+		
+		
+	// (6달 후)	-- (총 12달 후)
+		System.out.println("Next 6 months later!");
+		account2.passTime(6);
+		System.out.printf("Account2 balance: $ %.2f \t현재출금가능액: %.2f\n"
+						account2.getBalance(), account2.getWithdrawableAccount() );
 		
 		
 		
