@@ -56,38 +56,16 @@ public class AccountTest {
 		account2.passTime(6);
 		System.out.printf("Account2 balance: $ %.2f \t현재출금가능액: %.2f\n"
 						account2.getBalance(), account2.getWithdrawableAccount() );
+	
+	// (1달 후)	-- (총 13달 후)
+		System.out.println("Next 1 month later!");
+		account2.passTime(1);
+		System.out.printf("Account2 balance: $ %.2f \t현재출금가능액: %.2f\n"
+						account2.getBalance(), account2.getWithdrawableAccount() );
 		
-		
-		
-		System.out.print("account1 balance: ");
-		account1.getBalance();
-		System.out.print("account2 balance: ");
-		account2.getBalance();
-		System.out.println();
-		
-		
-		System.out.print("Enter withdrawl amount for account2: ");
-		//	sc = new Scanner(System.in);		//(이미 sc 객체를 만들었으니 선언 생략)
-		amount = scan.nextDouble();
-		account2.debit(amount);				//(10.00)
-		
-//[3문단]
-		System.out.print("account1 balance: ");
-		account1.getBalance();
-		System.out.print("account2 balance: ");
-		account2.getBalance();
-		System.out.println();
-		
-//[4문단]
-		System.out.println("next month!");
-		account1.nextMonth();
-		account2.nextMonth();
-		
-		System.out.print("account1 balance: ");
-		account1.getBalance();
-		System.out.print("account2 balance: ");
-		account2.getBalance();
-		System.out.println();
+		account2.debit(50);
+		System.out.printf("Account2 balance: $ %.2f \t현재출금가능액: %.2f\n"
+						account2.getBalance(), account2.getWithdrawableAccount() );
 		
 	}
 
