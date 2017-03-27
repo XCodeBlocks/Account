@@ -20,14 +20,13 @@ public class AccountTest {
 		System.out.printf("Account1 balance: $ %.2f \t현재출금가능액: %.2f\n"
 						account1.getBalance(), account1.getWithdrawableAccount() );
 		// 파산 여부 확인 ( isBankrupt - 형변환 )
-
+		
 	// (1달 후)
 		account1.passTime(1);
 		System.out.printf("Account1 balance: $ %.2f \t현재출금가능액: %.2f\n"
 						account1.getBalance(), account1.getWithdrawableAccount() );
 		// 파산 여부 확인 ( isBankrupt - 형변환 )
-
-
+		
 	// (5달 후)	-- (총 6달 후)
 		account1.passTime(5);
 		System.out.printf("Account1 balance: $ %.2f \t현재출금가능액: %.2f\n"
@@ -39,8 +38,9 @@ public class AccountTest {
 // SavingAccount
 
 	// (초기)
-		
-		
+		System.out.println();
+		System.out.printf("Account2 balance: $ %.2f \t현재출금가능액: %.2f\n"
+						account2.getBalance(), account2.getWithdrawableAccount() );
 
 	// (6달 후)
 		System.out.println("6 months later!");
@@ -48,7 +48,6 @@ public class AccountTest {
 		System.out.printf("Account2 balance: $ %.2f \t현재출금가능액: %.2f\n"
 						account2.getBalance(), account2.getWithdrawableAccount() );
 		account2.debit(50);
-		
 		
 	// (6달 후)	-- (총 12달 후)
 		System.out.println("Next 6 months later!");
