@@ -24,8 +24,8 @@ public abstract class Account
 		}
 	}
 	
-	public void getBalance() {							//(출력)
-		System.out.println(balance);
+	public double getBalance() {							//(출력)
+		return balance;
 		//System.out.printf("%.2f" ,balance);
 	}
 	/*
