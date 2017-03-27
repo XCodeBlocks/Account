@@ -19,8 +19,8 @@ public class AccountTest {
 		account2.getBalance();
 		
 		System.out.print("Enter deposit amount for ccount1: ");
-		Scanner sc = new Scanner(System.in);
-		input = sc.nextDouble();
+		Scanner scan = new Scanner(System.in);
+		input = scan.nextDouble();
 		account1.credit(input);				//(900)
 
 //[2문단]
@@ -33,7 +33,7 @@ public class AccountTest {
 		
 		System.out.print("Enter withdrawl amount for account2: ");
 		//	sc = new Scanner(System.in);		//(이미 sc 객체를 만들었으니 선언 생략)
-		input = sc.nextDouble();
+		input = scan.nextDouble();
 		account2.debit(input);				//(10.00)
 		
 //[3문단]
