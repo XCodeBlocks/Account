@@ -6,7 +6,7 @@ public abstract class Account
 	//[변수]
 	protected double balance;
 	
-	public Account(double input) {		//(초기화)
+	public Account(double input) {			//(초기화)
 		balance = input; 
 	}
 	
