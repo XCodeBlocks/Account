@@ -19,20 +19,8 @@ public abstract class Account
 	}
 	
 	public abstract void debit(double minus);
-	/*	(참고용으로 남겨둠 -- 다 완성되면 삭제!)
-	{				//(인출)
-		//(if문 구현 필요) -- (아니면 Exception handling)
-		if (balance < minus) {
-			System.out.println("Debit amount exceeded account balance.");
-		}
-		else {
-			balance -= minus;
-		}
-	}
-	*/
-	
+		
 	public abstract double getWithdrawableAccount();
-	
 	public abstract void passTime(int next);
 		
 	public double getBalance() {							//(출력)

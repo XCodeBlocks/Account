@@ -26,7 +26,7 @@ public class CheckingAccount extends Account {
 		else
 		{
 			balance -= input;
-			/*
+			/*		//(debug)
 			if (balance < input) {						//(잔금이 마이너스면 출력 - 문제 조건)
 				System.out.println("You now have - balance");
 			}
@@ -59,9 +59,9 @@ public class CheckingAccount extends Account {
 	public void passTime(int next) {
 		month += next;				//(시간 경과)
 	//[잔액에 따라 적용할 방법 선택]
-		if (balance >= 0) {						//(이자 추가)
+		if (balance >= 0) {						//( (+)이자 추가)
 			balance += ( balance * interest ) * next ;
-		} else {								//(대출이자 붙음)
+		} else {								//(대출이자 붙음 (-) )
 			balance += ( balance * loan_interest ) * next ;
 		}
 	}
