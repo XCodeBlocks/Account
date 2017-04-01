@@ -49,7 +49,11 @@ public class CheckingAccount extends Account {
 	
 	@Override				//(현재 출금 가능한 금액 확인(반환))
 	public double getWithdrawableAccount() {
-		return ( balance + (- credit_limit) );
+		if ( balance + (- credit_limit) < 0 ) {		//(-일때)
+			return 0;								//(...무조건 0)
+		} else {
+			return ( balance + (- credit_limit) );
+		}
 	}
 	
 	@Override
