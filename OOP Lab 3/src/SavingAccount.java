@@ -21,7 +21,7 @@ public class SavingAccount extends Account {
 		}
 		else							//(기간 후)
 		{
-			if ( minus < balance ) {		//('남은 금액'보다 많이 출금하려하면)
+			if ( minus > balance ) {		//('남은 금액'보다 많이 출금하려하면)
 				System.out.println("Cannot withdraw: credit limit exceeded!");
 			}
 			else {			
