@@ -4,7 +4,6 @@
 public class SavingAccount extends Account {
 
 	//[변수(필드) 선언]
-	private double	interest	;
 	private boolean is_modified	;	//(복리 이자 적용 여부 스위치)	-- (필드값은 기본적으로 false!)
 	
 	//[생성자]

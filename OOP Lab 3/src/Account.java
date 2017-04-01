@@ -4,8 +4,9 @@
 public abstract class Account
 {
 	//[변수]
-	protected double balance;		// (잔고)
-	protected int    month;			// (누적 경과 월수)
+	protected double balance	;		// (잔고)
+	protected int    month		;		// (누적 경과 월수)
+	protected double interest	;		// (이자)
 	
 	/*		//(생성자 필요 없어짐!)
 	public Account(double input) {			//(초기화)

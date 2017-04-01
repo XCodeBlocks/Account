@@ -5,7 +5,6 @@ public class CheckingAccount extends Account {
 	
 	//[변수선언]
 	private double	credit_limit	;
-	private double	interest		;
 	private double	loan_interest	;
 	
 	//[생성자]
