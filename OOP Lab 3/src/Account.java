@@ -4,12 +4,14 @@
 public abstract class Account
 {
 	//[변수]
-	protected double balance;
-	protected int    month;
+	protected double balance;		// (잔고)
+	protected int    month;			// (누적 경과 월수)
 	
+	/*		//(생성자 필요 없어짐!)
 	public Account(double input) {			//(초기화)
 		balance = input; 
 	}
+	*/
 	
 	public void credit(double input) {				//(입금)
 		balance += input;

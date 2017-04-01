@@ -1,17 +1,21 @@
+// ( checking account )
+
 
 public class CheckingAccount extends Account {
 	
 	//[변수선언]
-	private int		credit_limit	;
+	private double	credit_limit	;
 	private double	interest		;
 	private double	loan_interest	;
 	
 	//[생성자]
-	CheckingAccount(double input) {
-		super(input);
-		credit_limit	= -50	;
-		interest		= 0.01	;
-		loan_interest	= 0.07	;
+	CheckingAccount (double init_balance, double input_limit,
+					 double input_interest, double input__loan_interest)
+	{
+		balance 		= init_balance			;	//	100
+		credit_limit   = - input_limit			;	// -50	;
+		interest		= input_interest		;	// 0.01	;
+		loan_interest	= input__loan_interest	;	// 0.07	;
 	}
 	
 	@Override
@@ -20,7 +24,8 @@ public class CheckingAccount extends Account {
 		if ( balance - input < credit_limit ) {		//(한도보다 많이 출금하려하면)
 			System.out.println("Cannot withdraw: credit limit exceeded!");
 		}
-		else {
+		else
+		{
 			balance -= input;
 			if (balance < input)						//(잔금이 마이너스면 출력 - 문제 조건)
 			{
@@ -30,7 +35,7 @@ public class CheckingAccount extends Account {
 		
 	}
 	
-/*
+/*		//(passTime 메소드로 변경!)
 	public void nextMonth()
 	{
 		if (balance >= 0) {						//(이자 추가)
