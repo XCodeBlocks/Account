@@ -39,4 +39,18 @@ public class CheckingAccount extends Account {
 		}
 	}
 	
+	@Override
+	public double getWithdrawableAccount() {
+		
+		return 0;
+	}
+	
+	public boolean isBankrupt() {		//(출력문 없이, 현재 잔액이 대출 가능액을 초과했는지 확인)
+		if (balance < credit_limit) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
 }
