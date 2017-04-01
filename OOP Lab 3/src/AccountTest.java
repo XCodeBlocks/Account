@@ -19,6 +19,12 @@ public class AccountTest {
 
 	// (초기)
 		System.out.printf("Account1 balance: $ %.2f \t현재출금가능액: %.2f\n",
+				account1.getBalance(), account1.getWithdrawableAccount() );
+		System.out.println("Enter withdrawl amount for Account1: ");
+		amount = scan.nextDouble();
+		account1.debit(140);
+		
+		System.out.printf("Account1 balance: $ %.2f \t현재출금가능액: %.2f\n",
 						account1.getBalance(), account1.getWithdrawableAccount() );
 		// 파산 여부 확인 ( isBankrupt - 형변환 )
 		
