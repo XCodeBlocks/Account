@@ -43,14 +43,13 @@ public class CheckingAccount extends Account {
 	
 	@Override
 	public double getWithdrawableAccount() {
-		
-		return 0;
+		return balance;
 	}
 	
 	@Override
 	public void passTime(int next) {
 		month += next;				//(시간 경과)
-		//[잔액에 따라 적용할 방법 선택]
+	//[잔액에 따라 적용할 방법 선택]
 		if (balance >= 0) {						//(이자 추가)
 			balance += ( balance * interest ) ;
 		} else {								//(대출이자 붙음)
