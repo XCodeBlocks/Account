@@ -30,10 +30,10 @@ public abstract class Account
 	}
 	*/
 	
-	public abstract void passTime(int next);
-	
 	public abstract double getWithdrawableAccount();
 	
+	public abstract void passTime(int next);
+		
 	public double getBalance() {							//(출력)
 		return balance;
 		//System.out.printf("%.2f" ,balance);
