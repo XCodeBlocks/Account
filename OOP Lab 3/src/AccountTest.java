@@ -27,9 +27,8 @@ public class AccountTest {
 		System.out.printf("Account1 balance: $ %.2f \t현재출금가능액: %.2f\n",
 						account1.getBalance(), account1.getWithdrawableAccount() );
 		// 파산 여부 확인 ( isBankrupt - 형변환 )
-		(CheckingAccount)account1.isBankrupt;
-		if ( (CheckingAccount)account1.isBankrupt == true ) {
-			"account1 went bankrupt!"
+		if ( ( (CheckingAccount)account1 ).isBankrupt() == true ) {
+			System.out.println("account1 went bankrupt!");
 		}
 		
 	// (1달 후)
