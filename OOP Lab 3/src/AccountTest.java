@@ -36,13 +36,18 @@ public class AccountTest {
 		System.out.printf("Account1 balance: $ %.2f \t현재출금가능액: %.2f\n",
 						account1.getBalance(), account1.getWithdrawableAccount() );
 		// 파산 여부 확인 ( isBankrupt - 형변환 )
+		if ( ( (CheckingAccount)account1 ).isBankrupt() == true ) {
+			System.out.println("account1 went bankrupt!");
+		}
 		
 	// (5달 후)	-- (총 6달 후)
 		account1.passTime(5);
 		System.out.printf("Account1 balance: $ %.2f \t현재출금가능액: %.2f\n",
 						account1.getBalance(), account1.getWithdrawableAccount() );
 		// 파산 여부 확인 ( isBankrupt - 형변환 )
-		
+		if ( ( (CheckingAccount)account1 ).isBankrupt() == true ) {
+			System.out.println("account1 went bankrupt!");
+		}
 		
 //[2문단]
 // SavingAccount
