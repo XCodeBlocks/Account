@@ -76,7 +76,7 @@ public class AccountTest {
 		account2.passTime(1);
 		System.out.printf("Account2 balance: $ %.2f \t현재출금가능액: %.2f\n",
 						account2.getBalance(), account2.getWithdrawableAccount() );
-		
+		//
 		account2.debit(50);
 		System.out.printf("Account2 balance: $ %.2f \t현재출금가능액: %.2f\n",
 						account2.getBalance(), account2.getWithdrawableAccount() );
