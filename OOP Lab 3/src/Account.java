@@ -5,6 +5,7 @@ public abstract class Account
 {
 	//[변수]
 	protected double balance;
+	protected int    month;
 	
 	public Account(double input) {			//(초기화)
 		balance = input; 
@@ -23,6 +24,12 @@ public abstract class Account
 			balance -= minus;
 		}
 	}
+	
+	public void passTime(int next) {
+		month += next;
+	}
+	
+	public abstract double getWithdrawbleAccount();
 	
 	public double getBalance() {							//(출력)
 		return balance;
