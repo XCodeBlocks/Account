@@ -41,7 +41,7 @@ public class CheckingAccount extends Account {
 	}
 */
 	
-	@Override
+	@Override				//(현재 출금 가능한 금액 확인(반환))
 	public double getWithdrawableAccount() {
 		return balance;
 	}
