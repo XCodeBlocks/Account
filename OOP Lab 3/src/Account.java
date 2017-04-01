@@ -28,9 +28,7 @@ public abstract class Account
 	}
 	*/
 	
-	public void passTime(int next) {
-		month += next;
-	}
+	public abstract void passTime(int next);
 	
 	public abstract double getWithdrawableAccount();
 	

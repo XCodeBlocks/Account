@@ -30,6 +30,7 @@ public class CheckingAccount extends Account {
 		
 	}
 	
+/*
 	public void nextMonth()
 	{
 		if (balance >= 0) {						//(이자 추가)
@@ -38,11 +39,23 @@ public class CheckingAccount extends Account {
 			balance += ( balance * loan_interest ) ;
 		}
 	}
+*/
 	
 	@Override
 	public double getWithdrawableAccount() {
 		
 		return 0;
+	}
+	
+	@Override
+	public void passTime(int next) {
+		month += next;				//(시간 경과)
+		//[잔액에 따라 적용할 방법 선택]
+		if (balance >= 0) {						//(이자 추가)
+			balance += ( balance * interest ) ;
+		} else {								//(대출이자 붙음)
+			balance += ( balance * loan_interest ) ;
+		}
 	}
 	
 	public boolean isBankrupted() {		//(출력문 없이, 현재 잔액이 대출 가능액을 초과했는지 확인)
