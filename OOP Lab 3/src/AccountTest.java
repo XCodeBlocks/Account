@@ -10,7 +10,7 @@ public class AccountTest {
 //(2개 account 초기화)		--		** (아래에서 typecasting 필요!! 이렇게 상위 클래스로 지정할 수 있지만 나중에 typecasting을 해줘야 한다!)
 // (아래의 초기화 값들은 모두 double로 가정!)
 		Account account1 = new CheckingAccount( 100, 50, 0.01, 0.07 );
-//		Account account2 = new SavingAccount( 100, 0.05 );
+		Account account2 = new SavingAccount( 100, 0.05 );
 
 		Scanner scan = new Scanner(System.in);
 		double amount;
@@ -52,7 +52,7 @@ public class AccountTest {
 		
 //[2문단]
 // SavingAccount
-/*
+
 	// (초기)
 		System.out.println();
 		System.out.printf("Account2 balance: $ %.2f \t현재출금가능액: %.2f\n",
@@ -80,7 +80,7 @@ public class AccountTest {
 		account2.debit(50);
 		System.out.printf("Account2 balance: $ %.2f \t현재출금가능액: %.2f\n",
 						account2.getBalance(), account2.getWithdrawableAccount() );
-*/		
+		
 	}
 
 }
