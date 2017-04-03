@@ -4,10 +4,10 @@
 
 public class Car implements Valuable {
 //[변수 선언]
-	private int month;
+	private int month;		//(경과 월수)
 	
-	private String name;
-	private double price;
+	private String name;	//(이름)
+	private double price;	//(원 가격)
 	
 	public Car( String name, double price ) {
 		this.name = name;

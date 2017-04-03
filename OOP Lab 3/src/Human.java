@@ -4,8 +4,8 @@
 
 public class Human implements Valuable {
 //[변수 선언]	
-	private String name;
-	private int age;
+	private String name;	//(이름)
+	private int age;		//(나이)
 	
 	//[생성자]
 	public Human( String name, int age ) {
