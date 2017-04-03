@@ -40,7 +40,7 @@ public class SavingAccount extends Account {
 		//(해당 달의 값 계산은 생략)
 		if ( month > 12 && is_modified == false )		//(기간 지나고나서 잔고가 갱신되지 않았을때만 갱신!)
 		{	//(복리 수령금 계산)
-			( balance ) *= Math.pow( (1 + interest) ,  12 ) ;		//(12달 고정)
+			( balance ) *= Math.pow( (1 + interest) , 12 ) ;		//(12달 고정)
 			is_modified = true;		//(추가 복리적용 금지!)
 		}
 	}
