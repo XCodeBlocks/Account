@@ -35,7 +35,7 @@ public class SavingAccount extends Account {
 	}
 	
 	@Override
-	public void passTime(int next) {
+	public void passTime(int next) {		//(일단 입력 month < 0 인 경우는 생각하지 않기로 한다!)
 		month += next ;
 		//(해당 달의 값 계산은 생략)
 		if ( month > 12 && is_modified == false )		//(기간 지나고나서 잔고가 갱신되지 않았을때만 갱신!)
