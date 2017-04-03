@@ -1,5 +1,5 @@
 // (human 클래스)
-// - (value 인터페이스를 '구현')
+// - (valuable 인터페이스를 '구현')
 
 
 public class Human implements Valuable {
