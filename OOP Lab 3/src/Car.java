@@ -4,6 +4,8 @@
 
 public class Car implements Valuable {
 //[변수 선언]
+	private int month;
+	
 	private String name;
 	private double price;
 	
