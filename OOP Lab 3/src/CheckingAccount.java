@@ -67,11 +67,7 @@ public class CheckingAccount extends Account {
 	}
 	
 	public boolean isBankrupt() {		//(출력문 없이, 현재 잔액이 대출 가능액을 초과했는지 확인)
-		if (balance < credit_limit) {
-			return true;
-		} else {
-			return false;
-		}
+		return (balance < credit_limit) ;	//(개선: 조건식의 결과를 바로 return 가능!)
 	}
 	
 }
