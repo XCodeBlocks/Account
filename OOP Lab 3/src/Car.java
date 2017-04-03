@@ -8,7 +8,8 @@ public class Car implements Valuable {
 	
 	private String name;	//(이름)
 	private double price;	//(원 가격)
-	
+
+	//[생성자]
 	public Car( String name, double price ) {
 		this.name = name;
 		this.price = price;
