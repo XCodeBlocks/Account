@@ -8,7 +8,7 @@ public class CheckingAccount extends Account {
 	private double	loan_interest	;
 	
 	//[생성자]
-	CheckingAccount (double init_balance, double input_limit,
+	CheckingAccount (double init_balance,   double input_limit,
 					 double input_interest, double input__loan_interest)
 	{
 		balance 		= init_balance			;	//	100
