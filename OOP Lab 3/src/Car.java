@@ -8,16 +8,18 @@ public class Car implements Valuable {
 	
 	private String name;	//(이름)
 	private double price;	//(원 가격)
+	private double value;	//(가치)
 
 	//[생성자]
 	public Car( String name, double price ) {
 		this.name = name;
 		this.price = price;
+		value = (0.8) * price ;		//(초기 감가상각)
 	}
 	
 	@Override
 	public double EstimateVaule(int month) {
-		// TODO Auto-generated method stub
+		
 		return 0;
 	}
 
