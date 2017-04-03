@@ -4,23 +4,25 @@
 
 public class Car implements Valuable {
 //[변수 선언]
+	final double DEPRECIATION_PERC = 0.01;	//(감가상각 비율) -- (const는 자바에 없으므로 final로 대체!) 
+	
 	private int month;		//(경과 월수)
 	
 	private String name;	//(이름)
-	private double price;	//(원 가격)
-	private double value;	//(가치)
-
+	// private double price;	//(원 가격)
+	private double init_value;	//(가치)
+	
 	//[생성자]
 	public Car( String name, double price ) {
 		this.name = name;
-		this.price = price;
-		value = (0.8) * price ;		//(초기 감가상각)
+		//this.price = price;
+		init_value = (0.8) * price ;		//(초기 감가상각: 20% 감소)
 	}
 	
 	@Override
 	public double EstimateVaule(int month) {
 		
-		return 0;
+		return ( init_value * Math.pow( DEPRECIATION_PERC, month ) ) ;
 	}
 
 }
