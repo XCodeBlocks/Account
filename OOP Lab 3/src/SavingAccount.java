@@ -30,7 +30,7 @@ public class SavingAccount extends Account {
 	}
 	
 	@Override
-	public double getWithdrawableAccount() {
+	public double getWithdrawableAmount() {
 		return balance;
 	}
 	

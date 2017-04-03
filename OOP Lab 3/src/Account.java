@@ -20,7 +20,7 @@ public abstract class Account
 	
 	public abstract void debit(double minus);
 		
-	public abstract double getWithdrawableAccount();
+	public abstract double getWithdrawableAmount();
 	public abstract void passTime(int next);
 		
 	public double getBalance() {							//(출력)
