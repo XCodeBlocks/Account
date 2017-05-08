@@ -45,7 +45,7 @@ public class SavingAccount extends Account {
 	public void passTime(int next) {		//(일단 입력 month < 0 인 경우는 생각하지 않기로 한다!)
 		month += next ;
 		//(해당 달의 값 계산은 생략)
-		if ( month > 12 && is_modified == false )		//(기간 지나고나서 잔고가 갱신되지 않았을때만 갱신!)
+		if ( month >= 12 && is_modified == false )		//(기간 지나고나서 잔고가 갱신되지 않았을때만 갱신!)
 		{	//(복리 수령금 계산)
 			( balance ) *= Math.pow( (1 + interest) , 12 ) ;		//(12달 고정)
 			is_modified = true;		//(추가 복리적용 금지!)
@@ -54,7 +54,7 @@ public class SavingAccount extends Account {
 	public void passTime() {			//(기간 1달로 고정)	//[overloading]
 		month += 1 ;
 		//(해당 달의 값 계산은 생략)
-		if ( month > 12 && is_modified == false )		//(기간 지나고나서 잔고가 갱신되지 않았을때만 갱신!)
+		if ( month >= 12 && is_modified == false )		//(기간 지나고나서 잔고가 갱신되지 않았을때만 갱신!)
 		{	//(복리 수령금 계산)
 			( balance ) *= Math.pow( (1 + interest) , 12 ) ;		//(12달 고정)
 			is_modified = true;		//(추가 복리적용 금지!)
