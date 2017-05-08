@@ -70,13 +70,27 @@ public class CheckingAccount extends Account {
 			balance += ( balance * loan_interest ) * next ;
 		}
 	}
+	public void passTime() {		//(고정 1달 경과) -- [overloading]
+		month += 1;
+	//[잔액에 따라 적용할 방법 선택]
+		if (balance >= 0) {						//( (+)이자 추가)
+			balance += ( balance * interest ) ;
+		} else {								//(대출이자 붙음 (-) )
+			balance += ( balance * loan_interest ) ;
+		}
+	}
 	
 	public boolean isBankrupt() {		//(출력문 없이, 현재 잔액이 대출 가능액을 초과했는지 확인)
 		return (balance < credit_limit) ;	//(개선: 조건식의 결과를 바로 return 가능!)
 	}
 	
 	@Override
-	public double EstimateVaule(int month) {	//( <-인터페이스 )
+	public double estimateValue(int month) {	//( <-인터페이스 )
+		passTime(month);			//(Lab7 요구조건에 맞춰 추가!)
+		return balance;
+	}
+	public double estimateValue() {				//( <-인터페이스 )		//[overloading]
+		passTime();					//(Lab7 요구조건에 맞춰 추가!)
 		return balance;
 	}
 	

@@ -12,7 +12,7 @@ public class ValuableTest {
 		//(6개월 후의, 각각의 가치 계산)
 		for (Valuable objectItem : objectList) {
 			System.out.printf("%s \n", objectItem.toString() );
-			System.out.printf("6 month later... Valuable : %.2f\n\n", objectItem.EstimateVaule(6) );
+			System.out.printf("6 month later... Valuable : %.2f\n\n", objectItem.estimateValue(6) );
 		}
 	}
 

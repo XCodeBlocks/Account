@@ -14,8 +14,10 @@ public class Human implements Valuable {
 	}
 	
 	@Override
-	public double EstimateVaule(int month) {
+	public double estimateValue(int month) {
 		return Double.POSITIVE_INFINITY;	//(무조건 '무한 가치' 반환)
 	}
-
+	public double estimateValue() {			//[overloading]
+		return Double.POSITIVE_INFINITY;	//(무조건 '무한 가치' 반환)
+	}
 }
