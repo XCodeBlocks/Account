@@ -49,6 +49,8 @@ public abstract class Account implements Valuable	//(상위 클래스 '구현' -
 		for (Account account : list) {		//[확장형 for문: (형태) '자료형 반복참조자 : 반복대상'] -- (자료형 - 참조하는 대상의 자료형)
 			account.passTime( month ) ;
 		}
+		
+		
 	}	
 	
 	
