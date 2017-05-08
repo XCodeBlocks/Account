@@ -1,6 +1,7 @@
 // (실행 클래스)
 
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class AccountTest {
@@ -13,8 +14,36 @@ public class AccountTest {
 		Account account2 = new SavingAccount( 100, 0.05 );
 
 		Scanner scan = new Scanner(System.in);
-		double amount;
-
+		
+//[[아래 빈칸을 채워 예외처리를 한다.]]
+		try
+		{
+			double amount;
+			
+			System.out.println("Enter withdrawl amount for Account1: ");
+			amount = scan.nextDouble();
+			account1.debit(amount);
+			System.out.println("Account1 balance: $" + account1.getBalance() );
+			
+			System.out.println("Enter withdrawl amount for Account1: ");
+			amount = scan.nextDouble();
+			account2.debit(amount);
+			System.out.println("Account2 balance: $" + account2.getBalance() );
+		}
+		catch (InputMismatchException e) {		//[예외 - 숫자 대신 알파벳 입력]
+			System.out.println("예외 발생 : 숫자를 입력하세요\n" + e.toString() );
+		}
+		catch (Exception e) {		//[사용자 정의 예외 - 음수 입력 & 한도 초과]
+			System.out.println("예외 발생		" + e.toString() );
+		}
+		finally
+		{
+			account1.passTime(2);
+			System.out.println("6 month later... account1 : " + account1.getBalance() );
+		}
+		
+		
+/*		
 //[1문단]
 // CheckingAccount
 
@@ -80,7 +109,8 @@ public class AccountTest {
 		account2.debit(50);
 		System.out.printf("Account2 balance: $ %.2f \t현재출금가능액: %.2f\n",
 						account2.getBalance(), account2.getWithdrawableAmount() );
-		
+	
+*/
 	}
 
 }

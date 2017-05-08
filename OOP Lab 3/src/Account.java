@@ -1,7 +1,7 @@
 // (실사용 클래스)
 
 
-public abstract class Account
+public abstract class Account implements Valuable	//(상위 클래스 '구현' -> 하위 클래스 같이 적용됨!)
 {
 	//[변수]
 	protected double balance	;		// (잔고)
@@ -18,7 +18,9 @@ public abstract class Account
 		balance += input;
 	}
 	
-	public abstract void debit(double minus);
+	public void debit(double minus) throws Exception {
+		balance -= minus;
+	}
 		
 	public abstract double getWithdrawableAmount();
 	public abstract void passTime(int next);

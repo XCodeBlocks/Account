@@ -14,17 +14,24 @@ public class SavingAccount extends Account {
 
 
 	@Override
-	public void debit(double minus) {
+	public void debit(double minus) throws Exception {
 		if ( month <= 12 ) {			//(기간 전)
 			System.out.println("아직 출금할 수 없습니다.");
 		}
 		else							//(기간 후)
 		{
-			if ( minus > balance ) {		//('남은 금액'보다 많이 출금하려하면)
-				System.out.println("Cannot withdraw: credit limit exceeded!");
+			if ( minus < 0 ) {		//[음수 입력 - 예외]
+				//	throw new OtherExceptions();	//[처리 넘기기]
+				throw new Exception() ;
+			}			
+			else if ( minus > balance ) {		//['남은 금액'보다 많이 출금하려하면]
+				// System.out.println("Cannot withdraw: credit limit exceeded!");	//(Lab6 실습을 위해서...)
+				//	throw new OtherExceptions();	//[처리 넘기기]
+				throw new Exception() ;
 			}
-			else {			
-				balance -= minus;
+			else {			//[정상]
+				// balance -= minus		//(Lab6 실습을 위해서...)
+				super.debit(minus);
 			}
 		}
 	}
@@ -45,5 +52,9 @@ public class SavingAccount extends Account {
 		}
 	}
 
+	@Override
+	public double EstimateVaule(int month) {	//( <-인터페이스 )
+		return ( balance * Math.pow( (1 + interest) , month ) );
+	}
 
 }

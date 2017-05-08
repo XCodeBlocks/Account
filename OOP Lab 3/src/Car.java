@@ -21,8 +21,7 @@ public class Car implements Valuable {
 	
 	@Override
 	public double EstimateVaule(int month) {
-		
-		return ( init_value * Math.pow( DEPRECIATION_PERC, month ) ) ;
+		return ( init_value * Math.pow( (1 - DEPRECIATION_PERC), month ) ) ;	//( 초기 가치 * (1 - 감가상각 비율)^(월수) )
 	}
 
 }
