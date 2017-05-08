@@ -17,7 +17,8 @@ public class AccountTest {
 		ArrayList< Account > accountList = new ArrayList< Account >();
 
 		//[[accountList에 account1과 account2를 추가하세요.]]
-		
+		accountList.add(account1); 
+		accountList.add(account2);
 		
 		System.out.println("전체 계좌의 잔액 합산 : " + Account.sumForAccount( accountList ) );
 		
