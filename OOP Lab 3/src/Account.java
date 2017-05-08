@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 // (실사용 클래스)
 
 
@@ -34,6 +36,12 @@ public abstract class Account implements Valuable	//(상위 클래스 '구현' -
 		
 	}
 	*/
+	
+	public static double sumForAccount( ArrayList<? extends Object> list ) {
+		double sum = 0;
+		
+		return sum;
+	}
 	
 	
 }
