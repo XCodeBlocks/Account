@@ -37,9 +37,9 @@ public abstract class Account implements Valuable	//(상위 클래스 '구현' -
 	}
 	*/
 	
-	public static double sumForAccount( ArrayList<? extends Object> list ) {
+	public static double sumForAccount( ArrayList<? extends Account> list ) {		//[ <> 부분: 그 안의 마지막 부분의 subclass를 모두 지정할 수 있게 해줌! -- wildcard]		//(Object: typecasting이 필요하므로... 어짜피 그냥 않됨)
 		double sum = 0;
-		for (int element : list) {
+		for (Account account : list) {		//[확장형 for문: (형태) '자료형 반복참조자 : 반복대상'] -- (자료형 - 참조하는 대상의 자료형)
 			sum += account.getBalance() ;
 		}
 		return sum;
