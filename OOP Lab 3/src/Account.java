@@ -39,7 +39,9 @@ public abstract class Account implements Valuable	//(상위 클래스 '구현' -
 	
 	public static double sumForAccount( ArrayList<? extends Object> list ) {
 		double sum = 0;
-		
+		for (int element : list) {
+			sum += account.getBalance() ;
+		}
 		return sum;
 	}
 	
